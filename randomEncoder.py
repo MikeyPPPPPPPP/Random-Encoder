@@ -8,7 +8,7 @@ class encoderGenrator:
 		self.code = {}
 		self.alpha = ['\t','\n',' ','!', '~', '`', '#', '$', '%', '^', '&', '*', '(', ')', '_', '=', '-', '+', '{', '}', '|', '\\', '}', '{', '[', ']', ':', ';', '"', "'", ',', '.', '/', '?', '>', '<', '0', '1', '2', '3', '4', '5', '6', '7', '8', '9', 'a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'u', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z', 'A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'U', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z']
 		self.genrateKeys()
-		self.encodeedText = (base64.b64encode(''.join(self.disHolder).encode('ascii'))).decode('ascii')
+		self.encodeedText = base64.b64encode(''.join(self.disHolder).encode('ascii')).decode('ascii')
 
 	def genrateKeys(self):
 		for x in self.alpha:
